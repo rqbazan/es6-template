@@ -10,6 +10,7 @@ module.exports = {
     ]
   ],
   plugins: [
+    '@babel/plugin-proposal-class-properties',
     [
       'module-resolver',
       {
