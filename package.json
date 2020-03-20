@@ -1,6 +1,10 @@
 {
   "name": "es6-template",
-  "author": "Ricardo Q. Bazan <raquirozbazan@gmail.com>",
+  "author": {
+    "name": "Ricardo Q. Bazan",
+    "email": "raquirozbazan@gmail.com",
+    "url": "https://sxntixgo.codes"
+  },
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
