@@ -14,7 +14,7 @@ export default class BasicController {
   async getText(req, res) {
     try {
       const text = await this.model.getText()
-      res.json(text)
+      res.json({ text })
     } catch (error) {
       res.json({ error: error.message })
     }
