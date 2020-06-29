@@ -1,16 +1,20 @@
-import restify from 'restify'
-import helmet from 'helmet'
-import cors from 'cors'
-import routes from './routes'
+/* eslint-disable global-require */
+import createInstance from 'fastify'
+import registerCustomPlugins from './plugins'
 
-const server = restify.createServer()
+function buildFastify() {
+  const fastify = createInstance({
+    logger: true,
+    ignoreTrailingSlash: true
+  })
 
-server.use(restify.plugins.bodyParser())
-server.use(restify.plugins.queryParser())
-server.use(restify.plugins.fullResponse())
-server.use(helmet())
-server.use(cors())
+  fastify.register(require('fastify-cors'))
 
-routes(server)
+  fastify.register(require('fastify-helmet'))
 
-export default server
+  registerCustomPlugins(fastify)
+
+  return fastify
+}
+
+export { buildFastify }

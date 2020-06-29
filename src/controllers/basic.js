@@ -6,17 +6,12 @@ export default class BasicController {
     this.model = model
   }
 
-  /**
-   *
-   * @param {import('restify').Request} req
-   * @param {import('restify').Response} res
-   */
-  async getText(req, res) {
+  async getText() {
     try {
       const text = await this.model.getText()
-      res.json({ text })
+      return { text }
     } catch (error) {
-      res.json({ error: error.message })
+      return { error: error.message }
     }
   }
 }

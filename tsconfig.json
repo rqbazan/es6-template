@@ -4,6 +4,7 @@
     "checkJs": true,
     "noEmit": true,
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "target": "ES6",
     "baseUrl": ".",
     "paths": {
