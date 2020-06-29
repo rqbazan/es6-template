@@ -11,15 +11,3 @@ ready environment
 
 > The production environment must has the application build. Run `yarn build` to
 > get it.
-
-## Required extensions
-
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-## Recommended
-
-- [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
-
-- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
